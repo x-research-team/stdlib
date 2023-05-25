@@ -1,8 +1,10 @@
-module stdlib
+module github.com/x-research-team/stdlib
 
 go 1.20
 
 require github.com/rs/zerolog v1.29.0
+
+require golang.org/x/exp v0.0.0-20230425010034-47ecfdc1ba53
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

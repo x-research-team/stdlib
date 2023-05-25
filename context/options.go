@@ -2,7 +2,7 @@ package context
 
 import (
 	"context"
-	"stdlib/context/modules"
+	"github.com/x-research-team/stdlib/context/modules"
 	"time"
 
 	"github.com/rs/zerolog"

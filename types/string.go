@@ -1,15 +1,21 @@
 package types
 
+import "encoding/json"
+
 type String string
 
-func (s String) Size() Size {
-	return Size(len(s))
+func (s String) Size() USize {
+	return USize(len(s))
 }
 
-func (s String) String() string {
+func (s String) Value() string {
 	return string(s)
 }
 
-func (s String) ToBytes() []byte {
+func (s String) Bytes() []byte {
 	return []byte(s)
+}
+
+func (s String) JSON() ([]byte, error) {
+	return json.Marshal(s)
 }

@@ -2,8 +2,8 @@ package container
 
 import (
 	"fmt"
-	"stdlib/context"
-	"stdlib/ptr"
+	"github.com/x-research-team/stdlib/context"
+	"github.com/x-research-team/stdlib/ptr"
 
 	"github.com/pkg/errors"
 )

@@ -1,8 +1,8 @@
 package container
 
 import (
-	"stdlib/context"
-	"stdlib/context/modules"
+	"github.com/x-research-team/stdlib/context"
+	"github.com/x-research-team/stdlib/context/modules"
 	"testing"
 
 	"github.com/goccy/go-reflect"

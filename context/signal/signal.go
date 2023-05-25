@@ -1,9 +1,9 @@
 package signal
 
 import (
-	"stdlib/context"
-	"stdlib/context/container"
-	"stdlib/ptr"
+	"github.com/x-research-team/stdlib/context"
+	"github.com/x-research-team/stdlib/context/container"
+	"github.com/x-research-team/stdlib/ptr"
 
 	"golang.org/x/sync/errgroup"
 )
@@ -13,8 +13,7 @@ func Send[T any](ctx context.Context, k string, data ...T) error {
 	if err != nil {
 		return err
 	}
-	group, _ := errgroup.WithContext(ctx)
-	group.SetLimit(len(data))
+	var group errgroup.Group
 	for i := range data {
 		group.Go(ch.Send(ctx, i, data))
 	}
